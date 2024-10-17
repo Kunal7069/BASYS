@@ -1,0 +1,27 @@
+STEPS TO BE FOLLOWED AFTER CLONING THE PROJECT- 
+
+STEPS TO START THE BACKEND
+
+1. cd frontend
+2. cd backend
+3. node server.js
+
+OPEN ANOTHER TERMINAL
+
+STEPS TO START THE FRONTEND - 
+
+1. cd .. (If you are in backend directory)
+2. npm install
+3. npm run start
+
+CREDENTIALS FOR LOGIN PAGE- 
+USERNAME - demo
+PASSWORD - 123456789
+
+IN backend folder there is .env file 
+Paste MONGO_URI with your mongo db cloud atlas access url to change database to yours
+
+
+
+
+
