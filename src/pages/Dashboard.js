@@ -61,7 +61,7 @@ const Dashboard = () => {
     const fetchPatients = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:5000/api/patients?page=${currentPage}`);
+        const response = await axios.get(`https://basys-backend-hi5e.onrender.com/api/patients?page=${currentPage}`);
         setPatients(response.data.patients);
         setTotalPages(response.data.totalPages);
       } catch (error) {

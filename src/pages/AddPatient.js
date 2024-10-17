@@ -23,7 +23,7 @@ const AddPatient = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/patients', formData);
+      const response = await axios.post('https://basys-backend-hi5e.onrender.com/api/patients', formData);
       alert(response.data.message); // Display success message
       navigate('/'); // Redirect back to the dashboard
     } catch (error) {

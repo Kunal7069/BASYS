@@ -13,7 +13,7 @@ const AuthReports = () => {
     const fetchAuthReport = async () => {
       try {
         setLoading(true);
-        const response = await axios.get('http://localhost:5000/api/authorizations/auth_patients');
+        const response = await axios.get('https://basys-backend-hi5e.onrender.com/api/authorizations/auth_patients');
         setAuthReport(response.data);
         await fetchPatientNames(response.data);
       } catch (error) {
@@ -31,7 +31,7 @@ const AuthReports = () => {
     try {
       const patientIds = [...new Set(reports.map((report) => report.patientId))];
       const promises = patientIds.map(async (id) => {
-        const response = await axios.post('http://127.0.0.1:5000/api/patients/get_name', { patientId: id });
+        const response = await axios.post('https://basys-backend-hi5e.onrender.com/api/patients/get_name', { patientId: id });
         return { id, name: response.data.name };
       });
 

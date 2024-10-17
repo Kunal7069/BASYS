@@ -11,6 +11,7 @@ function App() {
     <Router>
       <div className="container mx-auto">
         <Routes>
+          
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>}/>
           <Route path="/authreports" element={<ProtectedRoute><AuthReports /></ProtectedRoute>}/>

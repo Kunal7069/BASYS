@@ -7,17 +7,16 @@ const Login = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const navigate = useNavigate(); // Use useNavigate instead of useHistory
+    const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            // Make a POST request to your login endpoint
-            const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
-            localStorage.setItem('token', response.data.token); // Store the JWT in local storage
-            navigate('/dashboard'); // Redirect to the dashboard after successful login
+            const response = await axios.post('https://basys-backend-hi5e.onrender.com/api/auth/login', { username, password });
+            localStorage.setItem('token', response.data.token);
+            navigate('/dashboard');
         } catch (err) {
-            setError(err.response?.data?.msg || 'An error occurred'); // Handle error messages
+            setError(err.response?.data?.msg || 'An error occurred');
         }
     };
 
@@ -47,7 +46,10 @@ const Login = () => {
                             required
                         />
                     </div>
-                    <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
+                    <button 
+                        type="submit" 
+                        className="w-full bg-blue-600 text-white p-2 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+                    >
                         Login
                     </button>
                 </form>

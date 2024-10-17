@@ -23,7 +23,7 @@ const AuthorizationForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/authorizations', {
+      await axios.post('https://basys-backend-hi5e.onrender.com/api/authorizations', {
         patientId: id,
         ...formData,
       });
