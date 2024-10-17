@@ -28,7 +28,7 @@ const AuthorizationForm = () => {
         ...formData,
       });
       alert('Prior authorization request submitted!');
-      navigate('/');
+      navigate('/dashboard');
     } catch (error) {
       console.error('Error submitting request:', error);
     }

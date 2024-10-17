@@ -25,7 +25,7 @@ const AddPatient = () => {
     try {
       const response = await axios.post('https://basys-backend-hi5e.onrender.com/api/patients', formData);
       alert(response.data.message); // Display success message
-      navigate('/'); // Redirect back to the dashboard
+      navigate('/dashboard'); // Redirect back to the dashboard
     } catch (error) {
       console.error('Error adding patient:', error);
       alert('Error saving patient details');
